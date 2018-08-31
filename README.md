@@ -1,4 +1,4 @@
-# ✨Nodepop✨
+# <p align ="center">✨Nodepop✨</p>
 
 Nodepop is a really simple online shop web application. Nodepop users can buy or sell items-- either by browsing through a list of ads that can be filtered by tags, price and other features; or by creating new ads.
 
@@ -43,4 +43,4 @@ from the appropiate folder in your MongoDB program files.
 ## ⭐️ Disclaimer
 This is an assignment for my [web development studies](https://www.youtube.com/watch?v=dgDLE4RfzEk), not a web app for real life purposes.
 
-&copy; Inma Ordóñez 2018
+<p align ="center">&copy; Inma Ordóñez 2018</p>
