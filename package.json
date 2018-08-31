@@ -1,0 +1,30 @@
+{
+  "name": "nodepop",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "nodemon ./bin/www",
+    "dev": "cross-env DEBUG=nodepop:* & npm start",
+    "install-db": "node install-db.js"
+  },
+  "dependencies": {
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.6.9",
+    "dotenv": "^6.0.0",
+    "ejs": "~2.5.7",
+    "express": "~4.16.0",
+    "express-generator": "^4.16.0",
+    "express-validator": "^5.3.0",
+    "http-errors": "~1.6.2",
+    "mongodb": "^3.1.4",
+    "mongoose": "^5.2.12",
+    "morgan": "~1.9.0"
+  },
+  "main": "app.js",
+  "author": "Inma Ordóñez",
+  "license": "ISC",
+  "description": "online shop web application",
+  "devDependencies": {
+    "cross-env": "^5.2.0"
+  }
+}

@@ -1,0 +1,74 @@
+{
+    "ads": [
+        {
+            "name": "Bicycle",
+            "selling": true,
+            "price": 230,
+            "pic": "bicycle.jpg",
+            "tags": ["lifestyle", "motor"]
+        },
+        {
+            "name": "iPhone 3GS",
+            "selling": false,
+            "price": 50,
+            "pic": "iphone.jpg",
+            "tags": ["lifestyle", "mobile"]
+        },
+        {
+            "name": "Harry Potter series",
+            "selling": true,
+            "price": 100,
+            "pic": "hp_books.jpg",
+            "tags": ["lifestyle"]
+        },
+        {
+            "name": "Smart Watch",
+            "selling": false,
+            "price": 20,
+            "pic": "smart_watch.jpg",
+            "tags": ["lifestyle", "mobile"]
+        },
+        {
+            "name": "Lawn mower",
+            "selling": true,
+            "price": 80,
+            "pic": "lawnmower.jpg",
+            "tags": ["work", "lifestyle"]
+        },
+        {
+            "name": "Motorbike",
+            "selling": false,
+            "price": 400,
+            "pic": "motorbike.jpg",
+            "tags": ["motor", "work"]
+        },
+        {
+            "name": "Samsung Galaxy S7 Edge",
+            "selling": true,
+            "price": 40,
+            "pic": "galaxyS7.jpg",
+            "tags": ["mobile", "lifestyle"]
+        },
+        {
+            "name": "Asus Laptop",
+            "selling": true,
+            "price": 200,
+            "pic": "laptop.jpg",
+            "tags": ["work"]
+        },
+        {
+            "name": "Thermomix TM5",
+            "selling": false,
+            "price": 750,
+            "pic": "thermomix.jpg",
+            "tags": ["lifestyle"]
+        },
+        {
+            "name": "Smart TV",
+            "selling": false,
+            "price": 200,
+            "pic": "tv.jpg",
+            "tags": ["lifestyle"]
+        }
+    ]
+}
