@@ -4,5 +4,72 @@ body {
 }
 
 a {
-  color: #00B7FF;
+  color: black;
+  text-decoration-line: none;
+}
+
+img {
+  max-height: 120px;
+  border-radius: 3px;
+}
+
+div.page-wrapper {
+  display: grid;
+  grid-template-rows: 20% auto 40px;
+  grid-template-columns: 280px auto;
+  grid-template-areas: 
+    "header header"
+    "filters ads"
+    "footer footer";
+  grid-gap: 5px;
+}
+
+div.header {
+  grid-area: header;
+  text-align: center;
+}
+
+div.filters {
+  grid-area: filters;
+  border-right: 2px dashed rgba(128, 128, 128, 0.5);
+}
+
+div.ads {
+  grid-area: ads;
+  margin: 0 20px;
+}
+
+footer {
+  grid-area: footer;
+  text-align: center;
+  align-self: center;
+}
+
+div.form-field {
+  margin: 20px 2px;
+}
+
+div.ad {
+  display: inline-block;
+  border: rgb(205, 215, 219) 1px solid;
+  border-radius: 20px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, .25);
+  margin: 15px 5px;
+  padding: 0 20px;
+}
+
+span.action {
+  font: 11px;
+  color: rgb(25, 155, 79);
+}
+
+p.tags {
+  margin: 0 0 5px 0;
+}
+
+span.tag {
+  display: inline-block;
+  background: rgba(77, 230, 141, 0.2);
+  padding: 2px 8px;
+  border-radius: 2px;
 }

@@ -14,13 +14,14 @@ npm install
 ## 👾 Initialize server
 1. Rename .env.EXAMPLE file to .env and check if connection configuration is locally correct
 
-2. Initialize the database using
-```shell
-npm run install-db
-```
-3. Run this command from the appropiate folder in your MongoDB program files
+2. Run this command from the appropiate folder in your MongoDB program files
 ```shell
 ./bin/mongod --dbpath ./data/db --directoryperdb
+```
+
+3. Initialize the database using
+```shell
+npm run install-db
 ```
 
 ## 👾 Run Nodepop

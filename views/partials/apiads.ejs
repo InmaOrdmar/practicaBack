@@ -1,0 +1,21 @@
+      <div class="ads">
+        <% Array.from(ads).forEach(function(ad) { %>
+        <div class="ad">
+          <p>
+            <% if(ad.selling) { %>
+            <span class="action">(selling)</span>
+            <% } else { %>
+            <span class="action">(looking for)</span>
+            <% } %>
+            <span class="name"><%= ad.name %></span>
+            <span class="price"><%= ad.price %> €</span>
+          </p>
+          <p><img src="../../images/<%= ad.pic %>"></p>
+          <p class ="tags">Tags: 
+            <% ad.tags.forEach(function(tag) { %>
+              <span class="tag"><%= tag %> </span>
+            <%  }); %>
+          </p>
+        </div>
+        <% }); %>
+      </div>

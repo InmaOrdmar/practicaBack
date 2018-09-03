@@ -1,0 +1,39 @@
+      <div class="filters">
+      <h2>Filter results</h2>
+        <form action="/apiv1/ads" method="post">
+          <div class="form-field">
+            <label for="name">Name starts with</label>
+            <input type="text" name="name" id="name" placeholder="Name">
+          </div>
+          <div class="form-field">
+            <label for="min">Min. price</label>
+            <input type="number" name="min" id="min" min="0" max="1000" placeholder="0">
+          </div>
+          <div class="form-field">
+            <label for="max">Max. price</label>
+            <input type="number" name="max" id="max" min="0" max="1000" placeholder="0">
+          </div>
+          <div class="form-field">
+            Do you want to:
+            <div class="operation">
+              <input type="radio" name="operation" value="buy">
+              <label for="buy">Buy</label>
+              <input type="radio" name="operation" value="sell">
+              <label for="sell">Sell</label>
+            </div>
+          </div>
+          <div class="form-field">
+            Tags:<br>
+            <input type="checkbox" name="lifestyle" id="lifestyle"><label for="lifestyle">Lifestyle</label>
+            <input type="checkbox" name="work" id="work"><label for="work">Work</label><br>
+            <input type="checkbox" name="motor" id="motor"><label for="motor">Motor</label>
+            <input type="checkbox" name="mobile" id="mobile"><label for="mobile">Mobile</label>
+          </div>
+          <div class="form field">
+            <button type="submit">Apply filters</button>
+          </div>
+        </form>
+        <p>
+          <a href="/apiv1/adform" class="button-link">Post your own ad!</a>
+        </p>
+      </div>

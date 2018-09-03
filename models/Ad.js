@@ -11,6 +11,16 @@ const adSchema = mongoose.Schema({
     tags: [String]
 });
 
+// create a static method
+
+adSchema.statics.list = function(filter, tagFilter, limit, skip) {
+    let query = Ad.find(filter);
+    query = query.find(tagFilter);
+    query.limit(limit);
+    query.skip(skip);
+    return query.exec();
+};
+
 // create ad model using scheme
 const Ad = mongoose.model('Ad', adSchema);
 
