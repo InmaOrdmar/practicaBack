@@ -23,6 +23,7 @@ npm install
 ```shell
 npm run install-db
 ```
+and answer ``yes`` when prompted.
 
 ## 👾 Run Nodepop
 To run the application in production mode, use

@@ -24,6 +24,7 @@ require('./models/Ad');
 
 // API routers setup
 app.use('/apiv1/ads', require('./routes/apiv1/ads'));
+app.use('/apiv1/adform', require('./routes/apiv1/adform'));
 
 //webapp routers setup
 app.use('/', require('./routes/index'));
