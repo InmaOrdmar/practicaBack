@@ -1,6 +1,6 @@
 body {
   padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font: 14px "Trebuchet MS", Helvetica, sans-serif;
 }
 
 a {
@@ -11,6 +11,10 @@ a {
 img {
   max-height: 120px;
   border-radius: 3px;
+}
+
+h2 {
+  font-size: 18px;
 }
 
 div.page-wrapper {
@@ -34,6 +38,24 @@ div.filters {
   border-right: 2px dashed rgba(128, 128, 128, 0.5);
 }
 
+p.button-link {
+  text-align: center;
+  margin: 50px 5px 5px 5px;
+}
+
+a.button-link {
+  background: rgba(25, 155, 79, 0.5);
+  padding: 10px 8px;
+  border-radius: 2px;
+  font-weight: bold;
+  color: white;
+}
+
+a.button-link:hover {
+  background: rgba(25, 155, 79, 0.8);
+  font-size: 15px;
+}
+
 div.ads {
   grid-area: ads;
   margin: 0 20px;
@@ -43,6 +65,7 @@ footer {
   grid-area: footer;
   text-align: center;
   align-self: center;
+  color: grey;
 }
 
 div.form-field {
@@ -61,6 +84,7 @@ div.ad {
 span.action {
   font: 11px;
   color: rgb(25, 155, 79);
+  font-weight: bold;
 }
 
 p.tags {

@@ -1,1 +1,39 @@
-<div class="new-ad-form">New ad form goes here</div>
+<div class="ads">
+      <h2>Post your ad</h2>
+        <form action="/apiv1/adform" method="post" enctype="multipart/form-data">
+          <div class="form-field">
+            <label for="name">Name</label>
+            <input type="text" name="name" id="name" placeholder="Name">
+          </div>
+          <div class="form-field">
+            <label for="price">Price</label>
+            <input type="number" name="price" id="price" min="0" placeholder="0">
+          </div>
+          <div class="form-field">
+            Do you want to:
+            <div class="operation">
+              <input type="radio" name="operation" value="buy">
+              <label for="buy">Buy</label>
+              <input type="radio" name="operation" value="sell">
+              <label for="sell">Sell</label>
+            </div>
+          </div>
+          <div class="form-field">
+            Tags:<br>
+            <input type="checkbox" name="lifestyle" id="lifestyle"><label for="lifestyle">Lifestyle</label>
+            <input type="checkbox" name="work" id="work"><label for="work">Work</label><br>
+            <input type="checkbox" name="motor" id="motor"><label for="motor">Motor</label>
+            <input type="checkbox" name="mobile" id="mobile"><label for="mobile">Mobile</label>
+          </div>
+          <div class="form-field">
+            <label for="pic">Upload a picture:</label><br>
+            <input type="file" name="pic" accept="image/*">
+          </div>
+          <div class="form-field">
+            <button type="submit">Post ad</button>
+          </div>
+        </form>
+        <div>
+        <%= message %>
+        </div>
+      </div>
