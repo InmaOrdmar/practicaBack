@@ -23,7 +23,7 @@ div.page-wrapper {
   grid-template-columns: 280px auto;
   grid-template-areas: 
     "header header"
-    "filters ads"
+    "filters contents"
     "footer footer";
   grid-gap: 5px;
 }
@@ -56,8 +56,8 @@ a.button-link:hover {
   font-size: 15px;
 }
 
-div.ads {
-  grid-area: ads;
+div.content {
+  grid-area: contents;
   margin: 0 20px;
 }
 

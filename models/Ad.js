@@ -21,6 +21,7 @@ adSchema.statics.list = function(filter, tagFilter, limit, skip) {
     return query.exec();
 };
 
+
 // create ad model using scheme
 const Ad = mongoose.model('Ad', adSchema);
 
