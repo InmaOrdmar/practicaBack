@@ -70,5 +70,12 @@
             "pic": "tv.jpg",
             "tags": ["lifestyle"]
         }
-    ]
+    ],
+    "users" : [
+        {
+            "username": "user1",
+            "pw": "0000",
+            "email": "user1@example.com"
+        } 
+     ]
 }

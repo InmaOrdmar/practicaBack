@@ -6,15 +6,17 @@ const readline = require('readline');
 require('dotenv').config();
 
 //load data
-const ads = require('./data/ads.json').ads;
+const ads = require('./data/data.json').ads;
+const users = require('./data/data.json').users;
 
 //load connection to database
 const conn = require('./lib/db-connection');
 
-//load ads model
+//load ads & users models
 const Ad = require('./models/Ad');
+const User = require('./models/User');
 
-// load ads data in ads database
+// load ads and users data in database
 conn.once('open', async () => {
     try {
         //create interface and ask about deleting db contents
@@ -25,6 +27,7 @@ conn.once('open', async () => {
         }
         //load new content
         await initAds(ads);
+        await initUsers(users);
 
         //close connection to database
         conn.close();
@@ -55,4 +58,13 @@ async function initAds(ads) {
     //load new documents
     const inserted = await Ad.insertMany(ads);
     console.log(`${inserted.length} ads were inserted`);
+};
+
+async function initUsers(users) {
+    //delete current documents
+    const deleted = await User.deleteMany();
+    console.log(`${deleted.n} users were deleted`);
+    //load new documents
+    const inserted = await User.insertMany(users);
+    console.log(`${inserted.length} users were inserted`);
 };
