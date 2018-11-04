@@ -5,9 +5,8 @@ const mongoose = require('mongoose');
 
 // define scheme for users
 const userSchema = mongoose.Schema({
-    username: String,
-    pw: String,
-    email: String
+	email: String,
+	password: String
 });
 
 // create user model using scheme

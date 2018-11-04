@@ -73,9 +73,8 @@
     ],
     "users" : [
         {
-            "username": "user1",
-            "pw": "0000",
-            "email": "user1@example.com"
-        } 
-     ]
+            "email": "user@example.com",
+            "password": "1234"
+        }
+    ]
 }
