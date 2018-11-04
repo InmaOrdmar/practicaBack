@@ -18,6 +18,10 @@ app.use(cookieParser());
 // serve static files
 app.use(express.static(path.join(__dirname, 'public')));
 
+// multi language express config
+const i18n = require('./lib/i18nConfig')();
+app.use(i18n.init);
+
 //connect to db and register models
 require('./lib/db-connection');
 require('./models/Ad');
@@ -31,6 +35,7 @@ app.use('/apiv1/auth', require('./routes/apiv1/auth'));
 
 //webapp routers setup
 app.use('/', require('./routes/index'));
+app.use('/lang', require('./routes/lang'));
 
 //local settings
 app.locals.title = '✨Nodepop✨';

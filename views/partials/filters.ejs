@@ -1,40 +1,46 @@
+      <div class="lang">
+      <% getLocales().forEach(lang => { %>
+        <a href="/lang/<%= lang %>"><%= lang.toUpperCase() %></a>&nbsp;
+        <% }) %> 
+      </div>
+      
       <div class="filters">
-      <h2>Filter results</h2>
+      <h2><%= __('Filter results') %></h2>
         <form action="/apiv1/ads" method="post">
           <div class="form-field">
-            <label for="name">Name starts with</label>
+            <label for="name"><%= __('Name starts with') %></label>
             <input type="text" name="name" id="name" placeholder="Name">
           </div>
           <div class="form-field">
-            <label for="min">Min. price</label>
+            <label for="min"><%= __('Min. price') %></label>
             <input type="number" name="min" id="min" min="0" max="1000" placeholder="0">
           </div>
           <div class="form-field">
-            <label for="max">Max. price</label>
+            <label for="max"><%= __('Max. price') %></label>
             <input type="number" name="max" id="max" min="0" max="1000" placeholder="0">
           </div>
           <div class="form-field">
-            Do you want to:
+            <%= __('Do you want to:') %>
             <div class="operation">
               <input type="radio" name="operation" value="buy">
-              <label for="buy">Buy</label>
+              <label for="buy"><%= __('Buy') %></label>
               <input type="radio" name="operation" value="sell">
-              <label for="sell">Sell</label>
+              <label for="sell"><%= __('Sell') %></label>
             </div>
           </div>
           <div class="form-field">
             Tags:<br>
-            <input type="checkbox" name="lifestyle" id="lifestyle"><label for="lifestyle">Lifestyle</label>
-            <input type="checkbox" name="work" id="work"><label for="work">Work</label><br>
-            <input type="checkbox" name="motor" id="motor"><label for="motor">Motor</label>
-            <input type="checkbox" name="mobile" id="mobile"><label for="mobile">Mobile</label>
+            <input type="checkbox" name="lifestyle" id="lifestyle"><label for="lifestyle"><%= __('Lifestyle') %></label>
+            <input type="checkbox" name="work" id="work"><label for="work"><%= __('Work') %></label><br>
+            <input type="checkbox" name="motor" id="motor"><label for="motor"><%= __('Motor') %></label>
+            <input type="checkbox" name="mobile" id="mobile"><label for="mobile"><%= __('Mobile') %></label>
           </div>
           <div class="form-field">
-            <button type="submit">Apply filters</button>
+            <button type="submit"><%= __('Apply filters') %></button>
           </div>
         </form>
         <p class="button-link">
-          <a href="/apiv1/adform" class="button-link">Post your own ad!</a>
-          <a href="/apiv1/tags" class="button-link">Browse tags!</a>
+          <a href="/apiv1/adform" class="button-link"><%= __('Post your own ad!') %></a>
+          <a href="/apiv1/tags" class="button-link"><%= __('Browse tags!') %></a>
         </p>
       </div>
