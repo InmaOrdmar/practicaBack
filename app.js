@@ -27,7 +27,7 @@ require('./models/User');
 app.use('/apiv1/ads', require('./routes/apiv1/ads'));
 app.use('/apiv1/adform', require('./routes/apiv1/adform'));
 app.use('/apiv1/tags', require('./routes/apiv1/tags'));
-app.use('/apiv1/login', require('./routes/apiv1/login'));
+app.use('/apiv1/auth', require('./routes/apiv1/auth'));
 
 //webapp routers setup
 app.use('/', require('./routes/index'));
