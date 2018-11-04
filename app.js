@@ -27,13 +27,15 @@ require('./models/User');
 app.use('/apiv1/ads', require('./routes/apiv1/ads'));
 app.use('/apiv1/adform', require('./routes/apiv1/adform'));
 app.use('/apiv1/tags', require('./routes/apiv1/tags'));
+app.use('/apiv1/login', require('./routes/apiv1/login'));
 
 //webapp routers setup
 app.use('/', require('./routes/index'));
-app.use('/users', require('./routes/users'));
 
 //local settings
 app.locals.title = '✨Nodepop✨';
+app.locals.email = '';
+app.locals.password = '';
 
 // catch 404 and forward to error handler
 app.use(function(_req, _res, next) {
