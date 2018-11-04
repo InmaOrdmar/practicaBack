@@ -7,6 +7,11 @@ const router = express.Router();
 //load Ad module
 const Ad = require('../../models/Ad');
 
+//load authentication module
+const auth = require('../../lib/jwtAuth');
+
+router.use(auth());
+
 router.get('/', async (req, res, next) => {
     try {
         // get queries

@@ -4,6 +4,7 @@
 const express = require('express');
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
+const path = require('path');
 const User = require('../../models/User');
 
 // create router
@@ -22,7 +23,6 @@ router.post('/', async (req, res, next) => {
     // get body params
     const email = req.body.email;
     const password = req.body.password;
-    console.log(email, password);
 
     // find user
     const user = await User.findOne({ email: email });
@@ -30,7 +30,17 @@ router.post('/', async (req, res, next) => {
         res.json({ success: false, error: 'Invalid credentials'});
         return;
     }
-    res.json(user);
+    //create jwt
+    jwt.sign({ _id: user._id }, process.env.JWT_SECRET, {
+        expiresIn: '2d'
+    }, (err, token) => {
+        if (err) {
+          next(err);
+          return;
+        }
+        res.setHeader('x-access-token', token);
+        res.redirect('/apiv1/ads');
+    });
  } catch(err) {
     next(err);
  }
