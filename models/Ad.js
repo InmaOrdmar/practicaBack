@@ -2,6 +2,8 @@
 //load mongoose module
 const mongoose = require('mongoose');
 
+mongoose.set('useCreateIndex', true);
+
 // define scheme for ads
 const adSchema = mongoose.Schema({
     name: String,
