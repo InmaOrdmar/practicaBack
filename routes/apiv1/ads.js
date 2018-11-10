@@ -9,10 +9,10 @@ const router = express.Router();
 const Ad = require('../../models/Ad');
 
 //load authentication module
-// const jwtAuth = require('../../lib/jwtAuth');
+const jwtAuth = require('../../lib/jwtAuth');
 
 // check if user is logged in
-// router.use(jwtAuth());
+router.use(jwtAuth());
 
 router.get('/', async (req, res, next) => {
     try {
