@@ -4,9 +4,9 @@
 const express = require('express');
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
-const User = require('../../models/User');
 
-// create router
+const User = require('../models/User');
+
 const router = express.Router();
 
 router.get('/', (req, res, next) => {
@@ -25,7 +25,7 @@ router.post('/', async (req, res, next) => {
 
     // find user
     const user = await User.findOne({ email: email });
-    if (!user || !await bcrypt.compare( password, user.password)) {
+    if (!user || !await bcrypt.compare(password, user.password)) {
         res.json({ success: false, error: 'Invalid credentials'});
         return;
     }
@@ -37,13 +37,11 @@ router.post('/', async (req, res, next) => {
           next(err);
           return;
         }
-        res.setHeader('x-access-token', token);
-        res.redirect('/apiv1/ads');
+        res.json({ success: true, token });
     });
  } catch(err) {
     next(err);
  }
 });
-
 
 module.exports = router;

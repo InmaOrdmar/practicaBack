@@ -4,13 +4,15 @@
 const express = require('express');
 const router = express.Router();
 
+
 //load Ad module
 const Ad = require('../../models/Ad');
 
 //load authentication module
-const auth = require('../../lib/jwtAuth');
+// const jwtAuth = require('../../lib/jwtAuth');
 
-router.use(auth());
+// check if user is logged in
+// router.use(jwtAuth());
 
 router.get('/', async (req, res, next) => {
     try {
@@ -72,7 +74,7 @@ router.post('/', async (req, res, next) => {
         // retrieve sent data 
         const formData = req.body;
         // build query string
-        var queryString = '/apiv1/ads/?';
+        let queryString = '/apiv1/ads/?';
         if(formData.name) {
             queryString += `name=${formData.name}&`;
         }

@@ -31,11 +31,11 @@ require('./models/User');
 app.use('/apiv1/ads', require('./routes/apiv1/ads'));
 app.use('/apiv1/adform', require('./routes/apiv1/adform'));
 app.use('/apiv1/tags', require('./routes/apiv1/tags'));
-app.use('/apiv1/auth', require('./routes/apiv1/auth'));
 
 //webapp routers setup
 app.use('/', require('./routes/index'));
 app.use('/lang', require('./routes/lang'));
+app.use('/auth', require('./routes/auth'));
 
 //local settings
 app.locals.title = '✨Nodepop✨';
