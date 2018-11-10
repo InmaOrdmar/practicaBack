@@ -74,34 +74,35 @@ router.post('/', async (req, res, next) => {
         // retrieve sent data 
         const formData = req.body;
         // build query string
-        let queryString = '/apiv1/ads/?';
+        let queries = [];
         if(formData.name) {
-            queryString += `name=${formData.name}&`;
+            queries.push(`name=${formData.name}`);
         }
         if(formData.min && formData.max) {
-            queryString += `price=${formData.min}-${formData.max}&`;
+            queries.push(`price=${formData.min}-${formData.max}`);
         } else if (formData.min) {
-            queryString += `price=${formData.min}-&`;
+            queries.push(`price=${formData.min}-`);
         } else if (formData.max) {
-            queryString += `price=-${formData.max}&`;
+            queries.push(`price=-${formData.max}`);
         }
         if(formData.operation === 'sell') {
-            queryString += 'selling=false&';
+            queries.push('selling=false');
         } else if (formData.operation === 'buy') {
-            queryString += 'selling=true&';
+            queries.push('selling=true');
         }
         if (formData.lifestyle) {
-            queryString += 'tags=lifestyle&'
+            queries.push('tags=lifestyle');
         }
         if (formData.work) {
-            queryString += 'tags=work&'
+            queries.push('tags=work');
         }
         if (formData.motor) {
-            queryString += 'tags=motor&'
+            queries.push('tags=motor');
         }
         if (formData.mobile) {
-            queryString += 'tags=mobile';
+            queries.push('tags=mobile');
         }
+        const queryString = '/apiv1/ads/?' + queries.join('&');
         console.log(queryString);
         // redirect to query
         res.redirect(queryString);
