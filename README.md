@@ -4,8 +4,7 @@ Nodepop is a really simple online shop web application. Nodepop users can buy or
 
 ## 👾 Visit Nodepop -- now online!
 
-Check out the online version of our Nodepop app at nodepop.inmaordmar.com.
-You can also reach my personal page at www.inmaordmar.com.
+Check out the online version of our Nodepop app at [nodepop.inmaordmar.com](nodepop.inmaordmar.com). You can also reach my personal page at www.inmaordmar.com.
 
 ## 👾 Run Nodepop locally
 
