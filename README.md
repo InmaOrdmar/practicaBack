@@ -2,13 +2,18 @@
 
 Nodepop is a really simple online shop web application. Nodepop users can buy or sell items-- either by browsing through a list of ads that can be filtered by tags, price and other features; or by creating new ads.
 
-In order to run the app, please follow these steps:
+## 👾 Visit Nodepop -- now online!
 
-## 👾 Download MongoDB
+Check out the online version of our Nodepop app at nodepop.inmaordmar.com.
+You can also reach my personal page at www.inmaordmar.com.
+
+## 👾 Run Nodepop locally
+
+### 👾 Download MongoDB
 
 [Download](https://www.mongodb.com/download-center#community)
 
-## 👾 Install Nodepop dependencies
+### 👾 Install Nodepop dependencies
 
 Enter this command from folder nodepop
 
@@ -16,7 +21,7 @@ Enter this command from folder nodepop
 npm install
 ```
 
-## 👾 Initialize server
+### 👾 Initialize server
 
 1. Rename .env.EXAMPLE file to .env and check if connection configuration is locally correct
 
@@ -34,7 +39,7 @@ npm install
 
     and answer ``yes`` when prompted.
 
-## 👾 Run Nodepop
+### 👾 Run Nodepop
 
 To run the application in production mode, use
 
@@ -42,7 +47,7 @@ To run the application in production mode, use
 npm start
 ```
 
-## 👾 Run Nodepop (development)
+### 👾 Run Nodepop (development)
 
 1. To run the application in development mode, use
 
@@ -62,4 +67,4 @@ npm start
 
 This is an assignment for my [web development studies](https://www.youtube.com/watch?v=dgDLE4RfzEk), not a web app for real life purposes.
 
-<p align ="center">&copy; Inma Ordóñez 2018</p>
+<p align ="center">&copy; Inma Ordóñez 2019</p>
