@@ -12,7 +12,7 @@ const Ad = require('../../models/Ad');
 const jwtAuth = require('../../lib/jwtAuth');
 
 // check if user is logged in
-router.use(jwtAuth());
+//router.use(jwtAuth());
 
 router.get('/', async (req, res, next) => {
     try {
