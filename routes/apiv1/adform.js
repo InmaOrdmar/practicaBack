@@ -3,9 +3,13 @@
 //load depencencies
 const express = require('express');
 const multer = require('multer');
+const cote = require('cote');
 
 //load Ad module
 const Ad = require('../../models/Ad');
+
+//load resize client
+const resizeClient = require('../../lib/resizeClient');
 
 // create router
 const router = express.Router();
@@ -37,11 +41,14 @@ router.post('/', upload.single('pic'), async (req, res, next) => {
         // get picture, keep original name and save it in /images/
         req.file.filename = req.file.originalname;
         const picture = req.file;
+        // request resizing and save 
+        picture.filename = resizeClient(picture.filename);
+        
         // create new object ad
         const adFields = {
             name: formFields.name,
             price: formFields.price,
-            pic: picture.filename,
+            pic: picture.filename
         };
         if(formFields.operation === 'sell') {
             adFields.selling = true;

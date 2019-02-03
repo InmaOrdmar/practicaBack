@@ -4,6 +4,8 @@
 const mongoose = require('mongoose');
 const bcrypt = require('bcrypt');
 
+mongoose.set('useCreateIndex', true);
+
 // define scheme for users
 const userSchema = mongoose.Schema({
 	email: {
